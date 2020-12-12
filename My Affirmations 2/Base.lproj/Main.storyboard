@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Affirmations_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48E-lz-oNd">
+                                <rect key="frame" x="67" y="173" width="283" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="J7f-nG-knY"/>
+                                    <constraint firstAttribute="height" constant="300" id="VvS-QB-ALk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="write an affirmation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LjK-uB-3DW">
+                                <rect key="frame" x="20" y="637" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Mhk-LP-B8m"/>
+                                    <constraint firstAttribute="height" constant="34" id="trJ-rl-wYI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ind-WQ-1rX">
+                                <rect key="frame" x="117" y="707" width="180" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="Wt7-8t-Zsz"/>
+                                    <constraint firstAttribute="width" constant="180" id="eKK-2m-fFU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                <state key="normal" title="Affirm">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="affirmButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jxC-Ca-dWg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="ind-WQ-1rX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="3vm-Lz-CVo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="48E-lz-oNd" secondAttribute="trailing" constant="64" id="69D-89-pak"/>
+                            <constraint firstItem="ind-WQ-1rX" firstAttribute="top" secondItem="LjK-uB-3DW" secondAttribute="bottom" constant="36" id="J5F-Ux-dfv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LjK-uB-3DW" secondAttribute="trailing" constant="20" id="TEp-oG-KmA"/>
+                            <constraint firstItem="48E-lz-oNd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="VFp-Ry-KEa"/>
+                            <constraint firstItem="LjK-uB-3DW" firstAttribute="top" secondItem="48E-lz-oNd" secondAttribute="bottom" constant="164" id="Vir-uu-mpx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ind-WQ-1rX" secondAttribute="trailing" constant="117" id="dEx-Lp-DPU"/>
+                            <constraint firstItem="LjK-uB-3DW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fYc-pO-qVL"/>
+                            <constraint firstItem="48E-lz-oNd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="iaj-gF-ZeS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="affirmLabel" destination="48E-lz-oNd" id="BPj-o8-9M5"/>
+                        <outlet property="affirmTextField" destination="LjK-uB-3DW" id="jkn-sr-PXt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
